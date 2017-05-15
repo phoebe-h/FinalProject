@@ -6,6 +6,8 @@ import javax.imageio.*;
 public class BongSoon
 {
     private Image pic = null;
+    private int x=0;
+    private int y=0;
     
     public BongSoon()
     {
@@ -15,6 +17,8 @@ public class BongSoon
         catch (IOException e)
         {}
     }
+    
+    
 
     public void draw (Graphics page)
     {
