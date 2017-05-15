@@ -29,12 +29,14 @@ public class Game extends Applet
 
     private Ground bar1;
     private BongSoon bong1;
+    private MinHyuk min1;
     
     public void init()
     {
         //initializes ground objects
         bar1 = new Ground(APPLET_WIDTH, APPLET_HEIGHT, 111, 82, 60);
         bong1 = new BongSoon();
+        min1 = new MinHyuk();
         
         //creates a color for water and sets background of applet to that color, sets applet size
         Color night = new Color(28, 4, 124);
@@ -48,6 +50,7 @@ public class Game extends Applet
     {
         bar1.draw(page);  
         bong1.draw(page);
+        min1.draw(page);
     }
     
     
