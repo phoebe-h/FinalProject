@@ -1,4 +1,5 @@
 skybox,textures/skybox/evening
-camera,-102.28866577148438,4.4526286125183105,62.97715759277344,35.5312614440918,8.95231819152832
+camera,-98.47390747070312,4.267130374908447,54.644474029541016,-83.20111083984375,-6.518755912780762
 terrain,textures/terrain/flat.png,textures/terrain/alpha.png,textures/floor/paving2.png,textures/floor/paving2.png,textures/floor/paving2.png
+object,-91.0,2.0,48.0,1.0,0.0,0.0,0.0,models/tux/tux.obj,models/tux/tux.png,Tux
 object,-11.0,-1.0,77.0,1.0,0.0,0.0,0.0,models/tux/tux.obj,models/tux/tux.png,Tux
