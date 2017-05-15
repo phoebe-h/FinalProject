@@ -6,12 +6,12 @@ import java.util.ArrayList;
  * it easier to work with models.  It scans a model
  * directory for all the obj files and organized them.
  */
-public class BongSoon extends GameObject
+public class Tux extends GameObject
 {
     /**
      * Zero-argument constructor that places the object in location 0, 0, 0
      */
-    public BongSoon()
+    public Tux()
     {
         this(0,0,0);
     }
@@ -19,14 +19,14 @@ public class BongSoon extends GameObject
     /**
      * Parameterized constructor - allows arbitary of object
      */
-    public BongSoon(double x, double y, double z)
+    public Tux(double x, double y, double z)
     {
         setX(x);
         setY(y);
         setZ(z);
         setScale(1);
-        setTexture("images/bongsooncrop.jpg");
-        setModel("images/bongsooncrop.jpg");
+        setTexture("models/tux/tux.png");
+        setModel("models/tux/tux.obj");
     }
 
     public void move()
