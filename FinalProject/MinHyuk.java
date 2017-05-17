@@ -3,7 +3,7 @@ import java.awt.Graphics;
 import java.awt.Image;
 import javax.imageio.*;
 
-public class MinHyuk
+public class MinHyuk extends Character
 {
     private Image pic = null;
     

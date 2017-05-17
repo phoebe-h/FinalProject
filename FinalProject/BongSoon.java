@@ -3,7 +3,7 @@ import java.awt.Graphics;
 import java.awt.Image;
 import javax.imageio.*;
 
-public class BongSoon
+public class BongSoon extends Character
 {
     private Image pic = null;
     private int x=0;

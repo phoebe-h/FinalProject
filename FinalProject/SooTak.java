@@ -3,7 +3,7 @@ import java.awt.Graphics;
 import java.awt.Image;
 import javax.imageio.*;
 
-public class SooTak
+public class SooTak extends Character
 {
     private Image pic = null;
     
