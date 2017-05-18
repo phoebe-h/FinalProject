@@ -6,8 +6,10 @@
 import java.util.Random;
 import java.applet.Applet;
 import java.awt.*;
+import java.awt.event.KeyListener; 
+import java.awt.event.KeyEvent; 
 
-public class Game extends Applet implements Runnable
+public class Game extends Applet implements Runnable, KeyListener
 {
     private final int APPLET_WIDTH = 700;
     private final int APPLET_HEIGHT = 600;
@@ -19,7 +21,7 @@ public class Game extends Applet implements Runnable
    
     private Ground bar1;
     private User user;
-    //   private BongSoon bong1;
+       private BongSoon bong1;
     //    private MinHyuk min1;
     //    private SooTak soo1;
         private GookDu gook1;
@@ -34,12 +36,34 @@ public class Game extends Applet implements Runnable
     private Background background;
     private RandomCircle circle; 
     private Skyline skyline; 
+    private int bongx, bongy; 
+    private char ch; 
+    
+    public void keyPressed (KeyEvent e) {}
+    public void keyReleased (KeyEvent e) {}
+    public void keyTyped(KeyEvent e) {
+        ch = e.getKeyChar(); 
+        if (ch=='d')
+            {bongx+=20; 
+             bong1.move(bongx,bongy); }
+        if (ch=='w')
+            {bongy-=20; 
+            bong1.move(bongx,bongy);}
+        if (ch=='s')
+            {bongy+=20; 
+            bong1.move(bongx,bongy);}
+            repaint(); 
+    }
+    
     
     public void init()
-    {
+    {       addKeyListener(this); 
             //initializes ground objects
             bar1 = new Ground(0, APPLET_HEIGHT-67);         
-        //    bong1 = new BongSoon();
+            
+            bongx = 0; 
+            bongy = APPLET_HEIGHT-300; 
+            bong1 = new BongSoon(bongx, bongy);
         //    min1 = new MinHyuk();
         //    soo1 = new SooTak();
             gook1 = new GookDu();
@@ -133,15 +157,15 @@ public class Game extends Applet implements Runnable
       
       bar1.draw(page); 
       skyline.draw(page); 
-      gook1.draw(page);
+      /*gook1.draw(page);
       try {
                 Thread.sleep(500);
             }
             catch (InterruptedException e){
                 e.printStackTrace();
             }
-      gook1.move(page, 100, 100);
-      
+      gook1.move(page, 50, 50);*/
+      bong1.draw(page);
       
       
 

@@ -1,10 +1,16 @@
 #BlueJ class context
-comment0.params=
-comment0.target=void\ init()
-comment1.params=
-comment1.target=void\ run()
-comment2.params=
-comment2.target=void\ start()
-comment3.params=page
-comment3.target=void\ paint(java.awt.Graphics)
-numComments=4
+comment0.params=e
+comment0.target=void\ keyPressed(java.awt.event.KeyEvent)
+comment1.params=e
+comment1.target=void\ keyReleased(java.awt.event.KeyEvent)
+comment2.params=e
+comment2.target=void\ keyTyped(java.awt.event.KeyEvent)
+comment3.params=
+comment3.target=void\ init()
+comment4.params=
+comment4.target=void\ run()
+comment5.params=
+comment5.target=void\ start()
+comment6.params=page
+comment6.target=void\ paint(java.awt.Graphics)
+numComments=7

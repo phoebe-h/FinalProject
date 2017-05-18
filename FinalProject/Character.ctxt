@@ -1,9 +1,8 @@
 #BlueJ class context
-comment0.target=Character
-comment1.params=fileName
-comment1.target=Character(java.lang.String)
-comment2.params=fileName\ x\ y
-comment2.target=Character(java.lang.String,\ int,\ int)
-comment3.params=x\ y
-comment3.target=void\ move(int,\ int)
-numComments=4
+comment0.params=fileName
+comment0.target=Character(java.lang.String)
+comment1.params=fileName\ x\ y
+comment1.target=Character(java.lang.String,\ int,\ int)
+comment2.params=x\ y
+comment2.target=void\ move(int,\ int)
+numComments=3

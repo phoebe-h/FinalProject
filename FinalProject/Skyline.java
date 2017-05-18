@@ -20,7 +20,7 @@ public class Skyline
     {   x=x1; 
         y=y1; 
         try
-        {pic = ImageIO.read(new File("skyline1.jpg"));
+        {pic = ImageIO.read(new File("skyline.jpg"));
         }
         catch (IOException e)
         {}

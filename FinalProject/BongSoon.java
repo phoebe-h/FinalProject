@@ -5,9 +5,6 @@ import javax.imageio.*;
 
 public class BongSoon extends Character
 {
-    private Image pic = null;
-    private int x=0;
-    private int y=0;
     
     public BongSoon()
     {

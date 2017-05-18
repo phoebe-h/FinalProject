@@ -7,6 +7,4 @@ comment2.params=page
 comment2.target=void\ draw(java.awt.Graphics)
 comment3.params=page\ x\ y
 comment3.target=void\ move(java.awt.Graphics,\ int,\ int)
-comment4.params=page\ x\ y
-comment4.target=void\ jump(java.awt.Graphics,\ int,\ int)
-numComments=5
+numComments=4
