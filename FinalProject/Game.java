@@ -33,6 +33,7 @@ public class Game extends Applet implements Runnable
     private int y1, y; 
     private Background background;
     private RandomCircle circle; 
+    private Skyline skyline; 
     
     public void init()
     {
@@ -54,6 +55,7 @@ public class Game extends Applet implements Runnable
     
             background = new Background(r,g,b);
             circle = new RandomCircle(400,y1,r,g,b);
+            skyline = new Skyline (0,APPLET_HEIGHT-450); 
             
             //sets size of applet
             setSize(APPLET_WIDTH, APPLET_HEIGHT);
@@ -130,6 +132,7 @@ public class Game extends Applet implements Runnable
               
       
       bar1.draw(page); 
+      skyline.draw(page); 
       gook1.draw(page);
       try {
                 Thread.sleep(500);
