@@ -9,13 +9,14 @@ public class MinHyuk extends Character
     
     public MinHyuk()
     {
-        try
-        {pic = ImageIO.read(new File("hyungsikcrop.jpg"));
-        }
-        catch (IOException e)
-        {}
+       super("hyungsikcrop.jpg");
     }
 
+    public MinHyuk(int x, int y)
+    {
+        super("hyungsikcrop.jpg", x, y);
+    }
+    
     public void draw (Graphics page)
     {
         page.drawImage(pic, 0, 0, null);

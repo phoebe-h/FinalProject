@@ -5,15 +5,15 @@ import javax.imageio.*;
 
 public class GookDu extends Character
 {
-    private Image pic = null;
     
     public GookDu()
     {
-        try
-        {pic = ImageIO.read(new File("gookducrop.jpg"));
-        }
-        catch (IOException e)
-        {}
+        super("gookducrop.jpg");
+    }
+    
+    public GookDu(int x, int y)
+    {
+        super("gookducrop.jpg", x, y);
     }
 
     public void draw (Graphics page)

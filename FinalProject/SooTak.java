@@ -5,20 +5,20 @@ import javax.imageio.*;
 
 public class SooTak extends Character
 {
-    private Image pic = null;
     
     public SooTak()
     {
-        try
-        {pic = ImageIO.read(new File("sootakcrop.jpg"));
-        }
-        catch (IOException e)
-        {}
+        super("sootakcrop.jpg");
     }
-
+    
+    public SooTak(int x, int y)
+    {
+        super("sootakcrop.jpg", x, y);
+    }
+    
     public void draw (Graphics page)
     {
-        page.drawImage(pic, 0, 0, null);
+        page.drawImage(pic, xo, yo, null);
     }
 
 }

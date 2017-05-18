@@ -1,6 +1,8 @@
 #BlueJ class context
 comment0.params=
 comment0.target=GookDu()
-comment1.params=page
-comment1.target=void\ draw(java.awt.Graphics)
-numComments=2
+comment1.params=x\ y
+comment1.target=GookDu(int,\ int)
+comment2.params=page
+comment2.target=void\ draw(java.awt.Graphics)
+numComments=3

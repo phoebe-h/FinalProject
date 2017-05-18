@@ -11,14 +11,13 @@ public class BongSoon extends Character
     
     public BongSoon()
     {
-        try
-        {pic = ImageIO.read(new File("bongsooncrop.jpg"));
-        }
-        catch (IOException e)
-        {}
+        super("bongsooncrop.jpg");
     }
     
-    
+    public BongSoon(int x, int y)
+    {
+        super("bongsooncrop.jpg", x, y);
+    }
 
     public void draw (Graphics page)
     {
