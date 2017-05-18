@@ -1,8 +1,9 @@
 #BlueJ class context
-comment0.params=
-comment0.target=MinHyuk()
-comment1.params=x\ y
-comment1.target=MinHyuk(int,\ int)
-comment2.params=page
-comment2.target=void\ draw(java.awt.Graphics)
-numComments=3
+comment0.target=MinHyuk
+comment1.params=
+comment1.target=MinHyuk()
+comment2.params=x\ y
+comment2.target=MinHyuk(int,\ int)
+comment3.params=page
+comment3.target=void\ draw(java.awt.Graphics)
+numComments=4
