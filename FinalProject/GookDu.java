@@ -3,7 +3,7 @@ import java.awt.Graphics;
 import java.awt.Image;
 import javax.imageio.*;
 
-public class GookDu
+public class GookDu extends Character
 {
     private Image pic = null;
     
