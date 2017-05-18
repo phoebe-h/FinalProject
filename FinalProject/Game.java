@@ -13,15 +13,16 @@ public class Game extends Applet implements Runnable
     private final int APPLET_HEIGHT = 600;
     private final int HEIGHT_MIN = 100;
     private final int VARIANCE = 40;
-//    private int y;
+    //    private int y;
     private int dy;
-//    private int dx;
+    //    private int dx;
    
     private Ground bar1;
- //   private BongSoon bong1;
-//    private MinHyuk min1;
-//    private SooTak soo1;
-//    private GookDu gook1;
+    private User user;
+    //   private BongSoon bong1;
+    //    private MinHyuk min1;
+    //    private SooTak soo1;
+    //    private GookDu gook1;
     
     private Stars stars; 
     private int count; 
@@ -35,32 +36,32 @@ public class Game extends Applet implements Runnable
     
     public void init()
     {
-        //initializes ground objects
-        bar1 = new Ground(0, APPLET_HEIGHT-67);         
-    //    bong1 = new BongSoon();
-    //    min1 = new MinHyuk();
-    //    soo1 = new SooTak();
-    //    gook1 = new GookDu();
-        stars = new Stars(50,50);
-        count = 0; 
-        r=3; 
-        g=13;
-        b=47;
-        done = true; 
-        y1 = 20; 
-        y = 700; 
-        dy = 1; 
-
-        background = new Background(r,g,b);
-        circle = new RandomCircle(400,y1,r,g,b);
-        
-        //sets size of applet
-        setSize(APPLET_WIDTH, APPLET_HEIGHT);
+            //initializes ground objects
+            bar1 = new Ground(0, APPLET_HEIGHT-67);         
+        //    bong1 = new BongSoon();
+        //    min1 = new MinHyuk();
+        //    soo1 = new SooTak();
+        //    gook1 = new GookDu();
+            stars = new Stars(50,50);
+            count = 0; 
+            r=3; 
+            g=13;
+            b=47;
+            done = true; 
+            y1 = 20; 
+            y = 700; 
+            dy = 1; 
+    
+            background = new Background(r,g,b);
+            circle = new RandomCircle(400,y1,r,g,b);
+            
+            //sets size of applet
+            setSize(APPLET_WIDTH, APPLET_HEIGHT);
     }
     
     public void run ()
     {
-      while (done){
+        while (done){
             //increments count to keep track of runs of the while loop
             count++;
             
@@ -103,18 +104,18 @@ public class Game extends Applet implements Runnable
             if (count==10000)
             {done=false;}
         
+        }
+   }
+
+
+   //method required for runnable
+   public void start()
+    {  
+       Thread thread = new Thread(this);
+       thread.start();
     }
-}
-
-
-    //method required for runnable
-    public void start()
-     {  
-        Thread thread = new Thread(this);
-        thread.start();
-     }
      
-    //draws all objects
+   //draws all objects
    public void paint (Graphics page)
    {  background.draw(page);
       sunny.draw(page);
@@ -124,8 +125,9 @@ public class Game extends Applet implements Runnable
      
       if (count%5==0)
       //draws stars every two runs of the loop (slowing it down)
-      if (r<150 && g<150 && b<150)
-          stars.draw(page);
+          if (r<150 && g<150 && b<150)
+              stars.draw(page);
+              
       
       bar1.draw(page); 
       

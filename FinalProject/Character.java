@@ -30,7 +30,9 @@ public class Character
         yo=y;
     }
     
-    public void move()
+    public void move(int x, int y)
     {
+        xo=x;
+        yo=y;
     }
 }
