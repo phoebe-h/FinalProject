@@ -36,7 +36,7 @@ public class Game extends Applet implements Runnable
     public void init()
     {
         //initializes ground objects
-        bar1 = new Ground(APPLET_WIDTH, APPLET_HEIGHT);         
+        bar1 = new Ground(0, APPLET_HEIGHT-67);         
     //    bong1 = new BongSoon();
     //    min1 = new MinHyuk();
     //    soo1 = new SooTak();
@@ -128,6 +128,7 @@ public class Game extends Applet implements Runnable
           stars.draw(page);
       
       bar1.draw(page); 
+      
       
 
    }
