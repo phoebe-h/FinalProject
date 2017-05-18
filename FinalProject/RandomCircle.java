@@ -36,7 +36,7 @@ public class RandomCircle {
     public void draw (Graphics page)
     {color = new Color (r,g,b);
      page.setColor(color);
-     page.fillOval(x+10,y-10,50,50);
+     page.fillOval(x+10,y-14,50,50);
     }
     
 }

@@ -22,7 +22,6 @@ public class Stars
 
     public void draw (Graphics page)
     {
-     
      //draws 50 stars 
      for (int count = 0; count<50; count++){
      page.setColor(Color.yellow);

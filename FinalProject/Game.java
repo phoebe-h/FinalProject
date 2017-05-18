@@ -15,13 +15,13 @@ public class Game extends Applet implements Runnable
     private final int VARIANCE = 40;
 //    private int y;
     private int dy;
-    private int dx;
+//    private int dx;
    
     private Ground bar1;
-    private BongSoon bong1;
-    private MinHyuk min1;
-    private SooTak soo1;
-    private GookDu gook1;
+ //   private BongSoon bong1;
+//    private MinHyuk min1;
+//    private SooTak soo1;
+//    private GookDu gook1;
     
     private Stars stars; 
     private int count; 
@@ -31,11 +31,12 @@ public class Game extends Applet implements Runnable
     private boolean done; 
     private int y1, y; 
     private Background background;
+    private RandomCircle circle; 
     
     public void init()
     {
         //initializes ground objects
-        bar1 = new Ground(APPLET_WIDTH, APPLET_HEIGHT, 111, 82, 60);
+        bar1 = new Ground(APPLET_WIDTH, APPLET_HEIGHT, 111, 82, 60);         
     //    bong1 = new BongSoon();
     //    min1 = new MinHyuk();
     //    soo1 = new SooTak();
@@ -47,13 +48,11 @@ public class Game extends Applet implements Runnable
         b=47;
         done = true; 
         y1 = 20; 
-        y = 450; 
-       
-        //creates a color for water and sets background of applet to that color, sets applet size
-      //  Color night = new Color(r, g, b);
+        y = 700; 
+        dy = 1; 
+
         background = new Background(r,g,b);
-        stars = new Stars(50,50);
-    //    setBackground(night);
+        circle = new RandomCircle(400,y1,r,g,b);
         
         //sets size of applet
         setSize(APPLET_WIDTH, APPLET_HEIGHT);
@@ -65,13 +64,16 @@ public class Game extends Applet implements Runnable
             //increments count to keep track of runs of the while loop
             count++;
             
+            
             //moon moves down as long as the y-coordinate is less than 600
             if (y1<=600) 
+                if (count%10==0)
                 y1+=dy;
             moon = new Moon (400,y1);
             
             //sun moves up as long as y coordinate greater than 10 
             if (y>=10)
+                if (count%10==0)
                 y-=dy;
             sunny = new Sun (400,y,50);
             
@@ -84,7 +86,8 @@ public class Game extends Applet implements Runnable
                 e.printStackTrace();
             }
             
-            //increments the values of color for background to make it turn to day 
+            if (count%10==0)
+            {//increments the values of color for background to make it turn to day 
             r+=2;
             b+=2;
             g+=1;
@@ -95,7 +98,8 @@ public class Game extends Applet implements Runnable
             if (b>190) b=190;
             
             background.setColors(r,g,b);
-        
+            circle = new RandomCircle(400,y1,r,g,b);}
+            
             if (count==10000)
             {done=false;}
         
@@ -115,13 +119,15 @@ public class Game extends Applet implements Runnable
    {  background.draw(page);
       sunny.draw(page);
       moon.draw(page);
-      bar1.draw(page); 
-      if (count%2==0)
+    
+      circle.draw(page); 
+     
+      if (count%5==0)
       //draws stars every two runs of the loop (slowing it down)
-      if (r<50 && g<50 && b<50)
+      if (r<150 && g<150 && b<150)
           stars.draw(page);
       
-      
+      bar1.draw(page); 
       
 
    }

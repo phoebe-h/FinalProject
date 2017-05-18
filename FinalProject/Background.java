@@ -40,8 +40,8 @@ public class Background
         //assigns coordinate to array elements
         xrectangle[0]=0;
         xrectangle[1]=0;
-        xrectangle[2]=600;
-        xrectangle[3]=600;
+        xrectangle[2]=700;
+        xrectangle[3]=700;
         yrectangle[0]=0;
         yrectangle[1]=600;
         yrectangle[2]=600;
