@@ -22,7 +22,7 @@ public class Game extends Applet implements Runnable
     //   private BongSoon bong1;
     //    private MinHyuk min1;
     //    private SooTak soo1;
-    //    private GookDu gook1;
+        private GookDu gook1;
     
     private Stars stars; 
     private int count; 
@@ -41,7 +41,7 @@ public class Game extends Applet implements Runnable
         //    bong1 = new BongSoon();
         //    min1 = new MinHyuk();
         //    soo1 = new SooTak();
-        //    gook1 = new GookDu();
+            gook1 = new GookDu();
             stars = new Stars(50,50);
             count = 0; 
             r=3; 
@@ -130,6 +130,15 @@ public class Game extends Applet implements Runnable
               
       
       bar1.draw(page); 
+      gook1.draw(page);
+      try {
+                Thread.sleep(500);
+            }
+            catch (InterruptedException e){
+                e.printStackTrace();
+            }
+      gook1.move(page, 100, 100);
+      
       
       
 

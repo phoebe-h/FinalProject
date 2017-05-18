@@ -18,7 +18,13 @@ public class GookDu extends Character
 
     public void draw (Graphics page)
     {
-        page.drawImage(pic, 0, 0, null);
+        page.drawImage(pic, xo, yo, null);
     }
-
+    
+    public void move (Graphics page, int x, int y)
+    {
+        super.move(x, y);
+        this.draw(page);
+    }
+    
 }
