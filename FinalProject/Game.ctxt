@@ -1,11 +1,10 @@
 #BlueJ class context
-comment0.target=Game
+comment0.params=
+comment0.target=void\ init()
 comment1.params=
-comment1.target=void\ init()
+comment1.target=void\ run()
 comment2.params=
-comment2.target=void\ run()
-comment3.params=
-comment3.target=void\ start()
-comment4.params=page
-comment4.target=void\ paint(java.awt.Graphics)
-numComments=5
+comment2.target=void\ start()
+comment3.params=page
+comment3.target=void\ paint(java.awt.Graphics)
+numComments=4
