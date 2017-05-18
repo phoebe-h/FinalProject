@@ -21,7 +21,7 @@ public class BongSoon extends Character
 
     public void draw (Graphics page)
     {
-        page.drawImage(pic, 0, 0, null);
+        page.drawImage(pic, xo, yo, null);
     }
 
 }
