@@ -5,36 +5,35 @@
  * Represents a graphical ground :D
  */
 
-import java.awt.*;
+import java.io.*;
+import java.awt.Graphics;
+import java.awt.Image;
+import javax.imageio.*;
 
 public class Ground
 {
-    //initializes private variables
-    private Color ground;
-    private int baseX;
-    private int baseY;
-    private int width = 1000;
-    private int height = 50;
-    private int r;
-    private int g;
-    private int b;
     
-    //constructor
-    public Ground (int center, int bottom, int red, int green, int blue)
-    {
-        baseX = center;
-        baseY = bottom;
-        r = red;
-        g = green;
-        b = blue;
+    private Image pic = null;
+    private int x;
+    private int y;
+    
+    public Ground(int x1, int y1)
+    {   x=x1; 
+        y=y1; 
+        try
+        {pic = ImageIO.read(new File("road.jpg"));
+        }
+        catch (IOException e)
+        {}
     }
     
+
     public void draw (Graphics page)
-    { 
-        //draws sand using the rgb values set in constructor
-        ground = new Color(r, g, b);
-        page.setColor(ground);
-        page.fillRect(0, baseY-height, width, height);
+    {
+        page.drawImage(pic, x, y, null);
     }
-    
+
 }
+
+    
+

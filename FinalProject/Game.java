@@ -36,7 +36,7 @@ public class Game extends Applet implements Runnable
     public void init()
     {
         //initializes ground objects
-        bar1 = new Ground(APPLET_WIDTH, APPLET_HEIGHT, 111, 82, 60);         
+        bar1 = new Ground(APPLET_WIDTH, APPLET_HEIGHT);         
     //    bong1 = new BongSoon();
     //    min1 = new MinHyuk();
     //    soo1 = new SooTak();
@@ -67,13 +67,13 @@ public class Game extends Applet implements Runnable
             
             //moon moves down as long as the y-coordinate is less than 600
             if (y1<=600) 
-                if (count%10==0)
+                if (count%5==0)
                 y1+=dy;
             moon = new Moon (400,y1);
             
             //sun moves up as long as y coordinate greater than 10 
             if (y>=10)
-                if (count%10==0)
+                if (count%5==0)
                 y-=dy;
             sunny = new Sun (400,y,50);
             
