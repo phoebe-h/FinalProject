@@ -21,4 +21,10 @@ public class SooTak extends Character
         page.drawImage(pic, xo, yo, null);
     }
 
+    
+    public void move (Graphics page, int x, int y)
+    {
+        super.move(x, y);
+        this.draw(page);
+    }
 }

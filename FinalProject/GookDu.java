@@ -27,4 +27,18 @@ public class GookDu extends Character
         this.draw(page);
     }
     
+    public void jump (Graphics page, int x, int y)
+    {
+        xo=x;
+        yo=y;
+        this.draw(page);
+        super.move(x, y-60);
+        this.draw(page);
+        super.move(x+60, y-60);
+        this.draw(page);
+        super.move(x+60, y);
+        this.draw(page);
+        
+    }
+    
 }
