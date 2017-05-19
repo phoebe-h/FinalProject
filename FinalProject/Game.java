@@ -21,7 +21,7 @@ public class Game extends DoubleBuffer implements Runnable, KeyListener
     private final int VARIANCE = 40;
     private int dy;
     private Ground bar1;
-    private User user = new User();
+    private User user; 
     private BongSoon bong1;
     private MinHyuk min1;
     private SooTak soo1, soo2, soo3;
@@ -42,6 +42,8 @@ public class Game extends DoubleBuffer implements Runnable, KeyListener
     private int randomsoo1, randomsoo2, randomsoo3, soox1, soox2, soox3; 
     private int randommin, minx; 
     private int randomgook, gookx; 
+    private Text points; 
+    
     
     public void keyPressed (KeyEvent e) {}
     public void keyReleased (KeyEvent e) {}
@@ -65,6 +67,7 @@ public class Game extends DoubleBuffer implements Runnable, KeyListener
     
     public void init()
     {       addKeyListener(this); 
+            user = new User();
             bar1 = new Ground(0, APPLET_HEIGHT-67);         
             
             bongx = 0; 
@@ -193,12 +196,9 @@ public class Game extends DoubleBuffer implements Runnable, KeyListener
                      gook1.move(gookx,APPLET_HEIGHT-115); }}
             if (gookx<=0)
                 gookx=700; 
-                     
-                     
-            if (count==10000)
-                done=false;
+      
             
-            if( Math.abs( bong1.getX() - soo1.getX() ) >=20 && Math.abs( bong1.getY() - soo1.getY() ) >= 53 )
+          /**  if(Math.abs(bong1.getX() - soo1.getX()) >=20 && Math.abs(bong1.getY()- soo1.getY())>=53)
             {
                 user.addPoint(-1);
             }
@@ -210,9 +210,12 @@ public class Game extends DoubleBuffer implements Runnable, KeyListener
             
             if( Math.abs( bong1.getX() - soo3.getX() ) >=20 && Math.abs( bong1.getY() - soo3.getY() ) >= 53 )
             {
-                user.addPoint(-1);
-            }
-        
+                user.addPoint(-1);*/
+           // }
+            
+            points = new Text("Points: "+ user.getPoints()); 
+             if (count==10000)
+                done=false;
         }
    }
 
@@ -246,7 +249,8 @@ public class Game extends DoubleBuffer implements Runnable, KeyListener
       soo2.draw(page); 
       soo3.draw(page); 
       min1.draw(page); 
-      gook1.draw(page); 
+      gook1.draw(page);
+      points.draw(page); 
 
    }
     
