@@ -8,8 +8,9 @@ import java.io.*;
 import java.awt.Graphics;
 import java.awt.Image;
 import javax.imageio.*;
+import java.awt.image.BufferedImage;
 
-public class Skyline
+public class Skyline  
 {
     
     private Image pic = null;
@@ -32,6 +33,7 @@ public class Skyline
         page.drawImage(pic, x, y, null);
     }
 
+    
 }
 
     

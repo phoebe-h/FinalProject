@@ -12,5 +12,5 @@ comment4.target=void\ run()
 comment5.params=
 comment5.target=void\ start()
 comment6.params=page
-comment6.target=void\ paint(java.awt.Graphics)
+comment6.target=void\ paintBuffer(java.awt.Graphics)
 numComments=7

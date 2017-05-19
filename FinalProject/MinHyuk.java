@@ -5,7 +5,7 @@ import javax.imageio.*;
 
 public class MinHyuk extends Character
 {
-    private Image pic = null;
+   
     
     public MinHyuk()
     {

@@ -9,7 +9,7 @@ import java.awt.*;
 import java.awt.event.KeyListener; 
 import java.awt.event.KeyEvent; 
 
-public class Game extends Applet implements Runnable, KeyListener
+public class Game extends DoubleBuffer implements Runnable, KeyListener
 {
     private final int APPLET_WIDTH = 700;
     private final int APPLET_HEIGHT = 600;
@@ -37,6 +37,7 @@ public class Game extends Applet implements Runnable, KeyListener
     private char ch; 
     private int randomsoo1, randomsoo2, randomsoo3, soox1, soox2, soox3; 
     private int randommin, minx; 
+    private int randomgook, gookx; 
     
     public void keyPressed (KeyEvent e) {}
     public void keyReleased (KeyEvent e) {}
@@ -50,6 +51,9 @@ public class Game extends Applet implements Runnable, KeyListener
             bong1.move(bongx,bongy);}
         if (ch=='s')
             {bongy+=20; 
+            bong1.move(bongx,bongy);}
+        if (ch=='a')
+           {bongx-=20; 
             bong1.move(bongx,bongy);}
             repaint(); 
     }
@@ -68,7 +72,8 @@ public class Game extends Applet implements Runnable, KeyListener
             soox3=700;
             
             minx=700; 
-  
+            gookx=700; 
+            
             stars = new Stars(50,50);
             count = 0; 
             r=3; 
@@ -130,7 +135,7 @@ public class Game extends Applet implements Runnable, KeyListener
             
             //simulates gravity 
             if (bongy<(APPLET_HEIGHT-115))
-                {bongy+=10; 
+                {bongy+=6; 
                 bong1.move(bongx,bongy); }
             
             randomsoo1 = (int)(Math.random()*10+1); 
@@ -159,7 +164,7 @@ public class Game extends Applet implements Runnable, KeyListener
             if (count%randomsoo3==0)
                 {soo3 = new SooTak();    
                 if (soox3>=0)
-                    {soox3-=30; 
+                    {soox3-=20; 
                      soo3.move(soox3,APPLET_HEIGHT-115); }}
             if (soox3<=0)
                 soox3=700; 
@@ -170,10 +175,20 @@ public class Game extends Applet implements Runnable, KeyListener
             if (count%randommin==0)
                 {min1 = new MinHyuk();    
                 if (minx>=0)
-                    {minx-=20;  
+                    {minx-=40;  
                      min1.move(minx,APPLET_HEIGHT-115); }}
             if (minx<=0)
                 minx=700; 
+           
+            randomgook = (int)(Math.random()*10+1); 
+            //generates minhyuk at random times
+            if (count%randomgook==0)
+                {gook1 = new GookDu();    
+                if (gookx>=0)
+                    {gookx-=10;  
+                     gook1.move(gookx,APPLET_HEIGHT-115); }}
+            if (gookx<=0)
+                gookx=700; 
                      
                      
             if (count==10000)
@@ -192,7 +207,7 @@ public class Game extends Applet implements Runnable, KeyListener
     }
      
    //draws all objects
-   public void paint (Graphics page)
+   public void paintBuffer (Graphics page)
    {  background.draw(page);
       sunny.draw(page);
       moon.draw(page);
@@ -207,19 +222,13 @@ public class Game extends Applet implements Runnable, KeyListener
       
       bar1.draw(page); 
       skyline.draw(page); 
-      /*gook1.draw(page);
-      try {
-                Thread.sleep(500);
-            }
-            catch (InterruptedException e){
-                e.printStackTrace();
-            }
-      gook1.move(page, 50, 50);*/
+   
       bong1.draw(page);
       soo1.draw(page); 
       soo2.draw(page); 
       soo3.draw(page); 
       min1.draw(page); 
+      gook1.draw(page); 
 
    }
     
