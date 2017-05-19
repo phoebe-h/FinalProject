@@ -8,6 +8,10 @@ import java.applet.Applet;
 import java.awt.*;
 import java.awt.event.KeyListener; 
 import java.awt.event.KeyEvent; 
+//bongsoon:20x53
+//gookdu:22x55
+//hyungsik:23x57
+//sootak:24x56
 
 public class Game extends DoubleBuffer implements Runnable, KeyListener
 {
@@ -17,7 +21,7 @@ public class Game extends DoubleBuffer implements Runnable, KeyListener
     private final int VARIANCE = 40;
     private int dy;
     private Ground bar1;
-    private User user;
+    private User user = new User();
     private BongSoon bong1;
     private MinHyuk min1;
     private SooTak soo1, soo2, soo3;
@@ -194,6 +198,20 @@ public class Game extends DoubleBuffer implements Runnable, KeyListener
             if (count==10000)
                 done=false;
             
+            if( Math.abs( bong1.getX() - soo1.getX() ) >=20 && Math.abs( bong1.getY() - soo1.getY() ) >= 53 )
+            {
+                user.addPoint(-1);
+            }
+            
+            if( Math.abs( bong1.getX() - soo2.getX() ) >=20 && Math.abs( bong1.getY() - soo2.getY() ) >= 53 )
+            {
+                user.addPoint(-1);
+            }
+            
+            if( Math.abs( bong1.getX() - soo3.getX() ) >=20 && Math.abs( bong1.getY() - soo3.getY() ) >= 53 )
+            {
+                user.addPoint(-1);
+            }
         
         }
    }

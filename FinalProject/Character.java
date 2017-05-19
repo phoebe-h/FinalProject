@@ -35,4 +35,14 @@ public class Character
         xo=x;
         yo=y;
     }
+    
+    public int getX()
+    {
+        return xo;
+    }
+    
+    public int getY()
+    {
+        return yo;
+    }
 }
