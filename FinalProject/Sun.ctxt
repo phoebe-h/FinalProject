@@ -1,6 +1,0 @@
-#BlueJ class context
-comment0.params=ax\ ay\ aradius
-comment0.target=Sun(int,\ int,\ int)
-comment1.params=page
-comment1.target=void\ draw(java.awt.Graphics)
-numComments=2

@@ -1,8 +1,0 @@
-#BlueJ class context
-comment0.params=r1\ g1\ b1
-comment0.target=Background(int,\ int,\ int)
-comment1.params=r1\ g1\ b1
-comment1.target=void\ setColors(int,\ int,\ int)
-comment2.params=page
-comment2.target=void\ draw(java.awt.Graphics)
-numComments=3

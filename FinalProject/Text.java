@@ -1,5 +1,3 @@
-
-
 /**
  * Jamie Zhang 
  */
@@ -25,12 +23,14 @@ public class Text
         xrectangle[2]=100;
         xrectangle[3]=100;
         yrectangle[0]=0;
-        yrectangle[1]=70;
-        yrectangle[2]=70;
+        yrectangle[1]=55;
+        yrectangle[2]=55;
         yrectangle[3]=0;
         page.fillPolygon(xrectangle,yrectangle,4);
-        
-        page.setColor(Color.black);
-        page.drawString(string, 20, 50);
+        page.setColor(Color.black); 
+        page.drawPolygon(xrectangle,yrectangle,4);
+
+        page.setFont(new Font("Impact", Font.BOLD, 18));
+        page.drawString(string, 10, 35);
        }
 }

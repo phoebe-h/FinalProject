@@ -8,6 +8,8 @@ import java.applet.Applet;
 import java.awt.*;
 import java.awt.event.KeyListener; 
 import java.awt.event.KeyEvent; 
+
+
 //bongsoon:20x53
 //gookdu:22x55
 //hyungsik:23x57
@@ -19,7 +21,6 @@ public class Game extends DoubleBuffer implements Runnable, KeyListener
     private final int APPLET_HEIGHT = 600;
     private final int HEIGHT_MIN = 100;
     private final int VARIANCE = 40;
-    private int dy;
     private Ground bar1;
     private User user; 
     private BongSoon bong1;
@@ -29,13 +30,8 @@ public class Game extends DoubleBuffer implements Runnable, KeyListener
     
     private Stars stars; 
     private int count; 
-    private int r,g,b; 
-    private Sun sunny;
-    private Moon moon;
     private boolean done; 
-    private int y1, y; 
-    private Background background;
-    private RandomCircle circle; 
+
     private Skyline skyline; 
     private int bongx, bongy; 
     private char ch; 
@@ -43,7 +39,8 @@ public class Game extends DoubleBuffer implements Runnable, KeyListener
     private int randommin, minx; 
     private int randomgook, gookx; 
     private Text points; 
-    
+    private int points1; 
+    private Pixel pixel; 
     
     public void keyPressed (KeyEvent e) {}
     public void keyReleased (KeyEvent e) {}
@@ -83,17 +80,9 @@ public class Game extends DoubleBuffer implements Runnable, KeyListener
             
             stars = new Stars(50,50);
             count = 0; 
-            r=3; 
-            g=13;
-            b=47;
+           
             done = true; 
-            y1 = 20; 
-            y = 700; 
-            dy = 1; 
     
-            background = new Background(r,g,b);
-            circle = new RandomCircle(400,y1,r,g,b);
-            skyline = new Skyline (0,APPLET_HEIGHT-450); 
 
             //sets size of applet
             setSize(APPLET_WIDTH, APPLET_HEIGHT);
@@ -105,17 +94,6 @@ public class Game extends DoubleBuffer implements Runnable, KeyListener
             //increments count to keep track of runs of the while loop
             count++;
 
-            //moon moves down as long as the y-coordinate is less than 600
-            if (y1<=600) 
-                if (count%5==0)
-                y1+=dy;
-            moon = new Moon (400,y1);
-            
-            //sun moves up as long as y coordinate greater than 10 
-            if (y>=10)
-                if (count%5==0)
-                y-=dy;
-            sunny = new Sun (400,y,50);
             
             repaint();
             
@@ -126,19 +104,6 @@ public class Game extends DoubleBuffer implements Runnable, KeyListener
                 e.printStackTrace();
             }
             
-            if (count%10==0)
-            {//increments the values of color for background to make it turn to day 
-            r+=2;
-            b+=2;
-            g+=1;
-            
-            //if the values become too big, they will just be set as intended day background colors 
-            if (r>252) r=252;
-            if (g>190) g=190;
-            if (b>190) b=190;
-            
-            background.setColors(r,g,b);
-            circle = new RandomCircle(400,y1,r,g,b);}
             
             //simulates gravity 
             if (bongy<(APPLET_HEIGHT-115))
@@ -197,28 +162,41 @@ public class Game extends DoubleBuffer implements Runnable, KeyListener
             if (gookx<=0)
                 gookx=700; 
       
-            
-          /**  if(Math.abs(bong1.getX() - soo1.getX()) >=20 && Math.abs(bong1.getY()- soo1.getY())>=53)
+
+            if(Math.abs(bongx - soox1) <=20 && Math.abs(bongy - (APPLET_HEIGHT-115))<=53)
             {
                 user.addPoint(-1);
             }
             
-            if( Math.abs( bong1.getX() - soo2.getX() ) >=20 && Math.abs( bong1.getY() - soo2.getY() ) >= 53 )
+            if(Math.abs(bongx - soox2) <=20 && Math.abs(bongy - (APPLET_HEIGHT-115))<=53)
             {
                 user.addPoint(-1);
             }
             
-            if( Math.abs( bong1.getX() - soo3.getX() ) >=20 && Math.abs( bong1.getY() - soo3.getY() ) >= 53 )
+            if( Math.abs(bongx - soox3) <=20 && Math.abs(bongy - (APPLET_HEIGHT-115))<=53)
             {
-                user.addPoint(-1);*/
-           // }
+                user.addPoint(-1);
+            }
+
+
+            if(Math.abs(bongx - gookx) <=20 && Math.abs(bongy - (APPLET_HEIGHT-115))<=53)
+            {
+                user.addPoint(+1);
+            }
             
-            points = new Text("Points: "+ user.getPoints()); 
-             if (count==10000)
-                done=false;
+            if(Math.abs(bongx - minx) <=20 && Math.abs(bongy - (APPLET_HEIGHT-115))<=53)
+            {
+                user.addPoint(+1);
+            }
+            
+            points1 = user.getPoints();
+            points = new Text("Points: "+ points1);
+           
+            skyline = new Skyline (0,0); 
+            if (count==10000)
+               done=false;
         }
    }
-
 
    //method required for runnable
    public void start()
@@ -229,20 +207,17 @@ public class Game extends DoubleBuffer implements Runnable, KeyListener
      
    //draws all objects
    public void paintBuffer (Graphics page)
-   {  background.draw(page);
-      sunny.draw(page);
-      moon.draw(page);
-    
-      circle.draw(page); 
-     
+   {  
+
+
+      skyline.draw(page); 
+           
       if (count%5==0)
       //draws stars every two runs of the loop (slowing it down)
-          if (r<150 && g<150 && b<150)
               stars.draw(page);
-              
-      
+     
+    
       bar1.draw(page); 
-      skyline.draw(page); 
    
       bong1.draw(page);
       soo1.draw(page); 

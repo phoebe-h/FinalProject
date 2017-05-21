@@ -27,8 +27,8 @@ public class Stars
      page.setColor(Color.yellow);
      page.fillOval(x,y,radius,radius);
      radius = (int) (Math.random()*4)+1; 
-     x = (int) (Math.random()*600)+1;
-     y = (int) (Math.random()*600)+1; }
+     x = (int) (Math.random()*700)+1;
+     y = (int) (Math.random()*350)+1; }
     }
 
 }

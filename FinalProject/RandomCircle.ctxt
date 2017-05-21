@@ -1,7 +1,0 @@
-#BlueJ class context
-comment0.target=RandomCircle
-comment1.params=x1\ y1\ r1\ g1\ b1
-comment1.target=RandomCircle(int,\ int,\ int,\ int,\ int)
-comment2.params=page
-comment2.target=void\ draw(java.awt.Graphics)
-numComments=3
