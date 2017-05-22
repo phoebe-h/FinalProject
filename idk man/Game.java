@@ -13,7 +13,7 @@ import java.awt.event.*;
 //stump 29 34
 //igloo 80 40 
 
-public class Game extends DoubleBuffer implements Runnable, KeyListener
+public class Game extends DoubleBuffer implements Runnable, KeyListener, MouseListener 
 {
     private final int APPLET_WIDTH = 700;
     private final int APPLET_HEIGHT = 600;
@@ -35,13 +35,63 @@ public class Game extends DoubleBuffer implements Runnable, KeyListener
   
     private int count; 
     private boolean done; 
+    private boolean done1; 
+    private boolean done2; 
+    private boolean done3; 
     
     private char ch; 
     private Text points; 
     private int points1; 
     
+    private Instructions1 one; 
+    private Instructions2 two; 
+    private Open open; 
     
+    private Counter counter; 
+    private int countdown; 
+    private End end; 
+    private String endstring; 
+    
+    //stuff for MouseListener
+     public void mousePressed(MouseEvent e) {
+         int xmouse = e.getX();
+         int ymouse = e.getY(); 
+         if (count <=100 && (xmouse<=680 && xmouse >=540) && (ymouse<=120 && ymouse>=65))
+            {done1 = false;
+             count=101;}
+         if (count <=200 && (xmouse<=430 && xmouse >=300) && (ymouse<=345 && ymouse>=300))
+            {done2 = false;
+             count=201;}
+         if (count <=300 && (xmouse<=670 && xmouse >=490) && (ymouse<=570 && ymouse>=500))
+            {done3 = false; 
+             count=301;}
+       
+    }
+
+    public void mouseReleased(MouseEvent e) {
      
+    }
+
+    public void mouseEntered(MouseEvent e) {
+    
+    }
+
+    public void mouseExited(MouseEvent e) {
+   
+    }
+
+    public void mouseClicked(MouseEvent e) {
+       
+    }
+
+    void saySomething(String eventDescription, MouseEvent e) {
+        System.out.println(eventDescription + " detected on "
+                        + e.getComponent().getClass().getName()
+                        + ".");
+    }
+
+    
+     //stuff for KeyListener
     public void keyPressed (KeyEvent e) {}
     public void keyReleased (KeyEvent e) {}
     public void keyTyped(KeyEvent e) {
@@ -55,14 +105,15 @@ public class Game extends DoubleBuffer implements Runnable, KeyListener
         if (ch=='a')
            {bearx-=20; 
             bear.move(bearx,beary);}
-        if (ch=='o')
-            count=50; 
             repaint(); 
     }
     
     
     public void init()
     {       addKeyListener(this); 
+          
+            addMouseListener(this);
+    
             user = new User();
             background = new Background(0,0);         
             
@@ -126,7 +177,17 @@ public class Game extends DoubleBuffer implements Runnable, KeyListener
             x10 = (int)(Math.random()*600+100); 
             y10 = -(int)(Math.random()*600+1); 
             flake10 = new SnowFlake(x10,y10);
-
+            
+            
+            one = new Instructions1(0,0); 
+            two = new Instructions2(0,0); 
+            open = new Open(0,0); 
+            
+            done1=true; 
+            done2=true; 
+            done3=true; 
+            
+            endstring = "YOU WIN!";
             
             //sets size of applet
             setSize(APPLET_WIDTH, APPLET_HEIGHT);
@@ -138,6 +199,8 @@ public class Game extends DoubleBuffer implements Runnable, KeyListener
     {
         while (done){
             //increments count to keep track of runs of the while loop
+            countdown = 9999-count; 
+            counter = new Counter(" "+countdown+" "); 
             count++;
             
             repaint();
@@ -275,10 +338,19 @@ public class Game extends DoubleBuffer implements Runnable, KeyListener
             flake8.move(x8,y8); 
             flake9.move(x9,y9); 
             flake10.move(x10,y10); 
-           
-            if (count==10000 || (Math.abs(bearx - stumpx) <=29 && Math.abs(beary - (APPLET_HEIGHT-300))<=78))
-               done=false;
-               
+            
+
+            if (count==10000 || (Math.abs(bearx - stumpx) <=60 && Math.abs(beary - (APPLET_HEIGHT-300))<=78))
+               {done=false;
+                if (points1<=0)
+                    endstring = "YOU LOSE!";
+                if  (Math.abs(bearx - stumpx) <=60 && Math.abs(beary - (APPLET_HEIGHT-300))<=78)
+                   {
+                    endstring = "YOU LOSE!"; }
+                }
+            
+            end = new End(endstring); 
+          
         }
    }
 
@@ -312,6 +384,19 @@ public class Game extends DoubleBuffer implements Runnable, KeyListener
       treestump.draw(page); 
       bear.draw(page);
       points.draw(page);
+      counter.draw(page); 
+      
+      //open screens 
+      if (done3&&count<=300) 
+         two.draw(page); 
+      if (done2&&count<=200)
+         one.draw(page); 
+      if (done1&&count<=100)
+         open.draw(page);
+        
+      //end screen
+      if (!done || count==10000)
+          end.draw(page); 
  
    }
     

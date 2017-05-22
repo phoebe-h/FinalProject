@@ -5,12 +5,12 @@
 import java.awt.*; 
 
 //draws second string (exactly like other string class)
-public class Text
+public class Counter
 {private String string; 
  private int[]xrectangle=new int [4];
  private int[]yrectangle=new int [4];
    
-    public Text(String string1)
+    public Counter(String string1)
     {string = string1; 
         
     }
@@ -18,10 +18,10 @@ public class Text
     public void draw (Graphics page) {
         page.setColor(Color.white);
         //assigns coordinate to array elements
-        xrectangle[0]=0;
-        xrectangle[1]=0;
-        xrectangle[2]=125;
-        xrectangle[3]=125;
+        xrectangle[0]=520;
+        xrectangle[1]=520;
+        xrectangle[2]=700;
+        xrectangle[3]=700;
         yrectangle[0]=0;
         yrectangle[1]=55;
         yrectangle[2]=55;
@@ -29,8 +29,8 @@ public class Text
         page.fillPolygon(xrectangle,yrectangle,4);
         page.setColor(Color.black); 
         page.drawPolygon(xrectangle,yrectangle,4);
-
+        
         page.setFont(new Font("Impact", Font.BOLD, 18));
-        page.drawString(string, 10, 35);
+        page.drawString("Countdown: "+string, 540, 35);
        }
 }
