@@ -133,10 +133,10 @@ public class Game extends DoubleBuffer implements Runnable, KeyListener, MouseLi
             count = 0; 
             done = true; 
     
-            igloochange = 5;
-            snowmanchange = 5;
-            stumpchange = 5;
-            treechange = 5; 
+            igloochange = 10;
+            snowmanchange = 10;
+            stumpchange = 10;
+            treechange = 10; 
             
             x1 = (int)(Math.random()*600+100); 
             y1 = -(int)(Math.random()*600+1); 
