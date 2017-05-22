@@ -1,0 +1,198 @@
+Class documentation
+<---- javadoc command: ---->
+C:\PROGRA~1\Java\JDK18~1.0_9\bin\javadoc.exe
+-author
+-version
+-nodeprecated
+-package
+-noindex
+-notree
+-nohelp
+-nonavbar
+-source
+1.8
+-classpath
+C:\Program Files (x86)\BlueJ\lib\bluejcore.jar;C:\Program Files (x86)\BlueJ\lib\junit-4.8.2.jar;C:\Users\Owner\Documents\GitHub\color-ch3-2016-JaimitaZhang\ColorLabs\bookClasses;C:\Users\Owner\Documents\GitHub\FinalProject\FinalProject\bookClasses;C:\Program Files (x86)\BlueJ\lib\userlib\pi4j-core.jar;C:\Program Files (x86)\BlueJ\lib\userlib\pi4j-device.jar;C:\Program Files (x86)\BlueJ\lib\userlib\pi4j-gpio-extension.jar;C:\Program Files (x86)\BlueJ\lib\userlib\pi4j-service.jar;C:\Users\Owner\Documents\GitHub\FinalProject\FinalProject
+-d
+C:\Users\Owner\Documents\GitHub\FinalProject\FinalProject\doc
+-encoding
+UTF-8
+-charset
+UTF-8
+-docletpath
+C:\Program Files (x86)\BlueJ\lib\bjdoclet.jar
+-doclet
+bluej.doclet.doclets.formats.html.HtmlDoclet
+C:\Users\Owner\Documents\GitHub\FinalProject\FinalProject\Game.java
+<---- end of javadoc command ---->
+Loading source file C:\Users\Owner\Documents\GitHub\FinalProject\FinalProject\Game.java...
+Constructing Javadoc information...
+Standard Doclet version 1.8.0_91
+Building tree for all the packages and classes...
+Generating C:\Users\Owner\Documents\GitHub\FinalProject\FinalProject\doc\Game.html...
+Generating C:\Users\Owner\Documents\GitHub\FinalProject\FinalProject\doc\package-frame.html...
+Generating C:\Users\Owner\Documents\GitHub\FinalProject\FinalProject\doc\package-summary.html...
+Generating C:\Users\Owner\Documents\GitHub\FinalProject\FinalProject\doc\constant-values.html...
+Generating C:\Users\Owner\Documents\GitHub\FinalProject\FinalProject\doc\serialized-form.html...
+C:\Users\Owner\Documents\GitHub\color-ch3-2016-JaimitaZhang\ColorLabs\bookClasses\Picture1.java:17: error: class Picture is public, should be declared in a file named Picture.java
+public class Picture extends SimplePicture
+       ^
+C:\Users\Owner\Documents\GitHub\color-ch3-2016-JaimitaZhang\ColorLabs\bookClasses\MovieWriter.java:7: error: package ch.randelshofer.media.avi does not exist
+import ch.randelshofer.media.avi.AVIOutputStream;
+                                ^
+C:\Users\Owner\Documents\GitHub\color-ch3-2016-JaimitaZhang\ColorLabs\bookClasses\JpegImagesToMovie.java:35: error: package javax.media does not exist
+import javax.media.*;
+^
+C:\Users\Owner\Documents\GitHub\color-ch3-2016-JaimitaZhang\ColorLabs\bookClasses\JpegImagesToMovie.java:36: error: package javax.media.control does not exist
+import javax.media.control.*;
+^
+C:\Users\Owner\Documents\GitHub\color-ch3-2016-JaimitaZhang\ColorLabs\bookClasses\JpegImagesToMovie.java:37: error: package javax.media.protocol does not exist
+import javax.media.protocol.*;
+^
+C:\Users\Owner\Documents\GitHub\color-ch3-2016-JaimitaZhang\ColorLabs\bookClasses\JpegImagesToMovie.java:38: error: package javax.media.protocol does not exist
+import javax.media.protocol.DataSource;
+                           ^
+C:\Users\Owner\Documents\GitHub\color-ch3-2016-JaimitaZhang\ColorLabs\bookClasses\JpegImagesToMovie.java:39: error: package javax.media.datasink does not exist
+import javax.media.datasink.*;
+^
+C:\Users\Owner\Documents\GitHub\color-ch3-2016-JaimitaZhang\ColorLabs\bookClasses\JpegImagesToMovie.java:40: error: package javax.media.format does not exist
+import javax.media.format.VideoFormat;
+                         ^
+C:\Users\Owner\Documents\GitHub\color-ch3-2016-JaimitaZhang\ColorLabs\bookClasses\JpegImagesToMovie.java:51: error: cannot find symbol
+public class JpegImagesToMovie implements ControllerListener, 
+                                          ^
+  symbol: class ControllerListener
+C:\Users\Owner\Documents\GitHub\color-ch3-2016-JaimitaZhang\ColorLabs\bookClasses\JpegImagesToMovie.java:52: error: cannot find symbol
+  DataSinkListener {
+  ^
+  symbol: class DataSinkListener
+C:\Users\Owner\Documents\GitHub\color-ch3-2016-JaimitaZhang\ColorLabs\bookClasses\JpegImagesToMovie.java:68: error: cannot find symbol
+                               MediaLocator outML) {
+                               ^
+  symbol:   class MediaLocator
+  location: class JpegImagesToMovie
+C:\Users\Owner\Documents\GitHub\color-ch3-2016-JaimitaZhang\ColorLabs\bookClasses\JpegImagesToMovie.java:120: error: cannot find symbol
+                         MediaLocator outML) {
+                         ^
+  symbol:   class MediaLocator
+  location: class JpegImagesToMovie
+C:\Users\Owner\Documents\GitHub\color-ch3-2016-JaimitaZhang\ColorLabs\bookClasses\JpegImagesToMovie.java:137: error: cannot find symbol
+                      MediaLocator outML,
+                      ^
+  symbol:   class MediaLocator
+  location: class JpegImagesToMovie
+C:\Users\Owner\Documents\GitHub\color-ch3-2016-JaimitaZhang\ColorLabs\bookClasses\JpegImagesToMovie.java:233: error: cannot find symbol
+                      MediaLocator outML,
+                      ^
+  symbol:   class MediaLocator
+  location: class JpegImagesToMovie
+C:\Users\Owner\Documents\GitHub\color-ch3-2016-JaimitaZhang\ColorLabs\bookClasses\JpegImagesToMovie.java:323: error: cannot find symbol
+  DataSink createDataSink(Processor p, MediaLocator outML) {
+                          ^
+  symbol:   class Processor
+  location: class JpegImagesToMovie
+C:\Users\Owner\Documents\GitHub\color-ch3-2016-JaimitaZhang\ColorLabs\bookClasses\JpegImagesToMovie.java:323: error: cannot find symbol
+  DataSink createDataSink(Processor p, MediaLocator outML) {
+                                       ^
+  symbol:   class MediaLocator
+  location: class JpegImagesToMovie
+C:\Users\Owner\Documents\GitHub\color-ch3-2016-JaimitaZhang\ColorLabs\bookClasses\JpegImagesToMovie.java:323: error: cannot find symbol
+  DataSink createDataSink(Processor p, MediaLocator outML) {
+  ^
+  symbol:   class DataSink
+  location: class JpegImagesToMovie
+C:\Users\Owner\Documents\GitHub\color-ch3-2016-JaimitaZhang\ColorLabs\bookClasses\JpegImagesToMovie.java:354: error: cannot find symbol
+  boolean waitForState(Processor p, int state) {
+                       ^
+  symbol:   class Processor
+  location: class JpegImagesToMovie
+C:\Users\Owner\Documents\GitHub\color-ch3-2016-JaimitaZhang\ColorLabs\bookClasses\JpegImagesToMovie.java:368: error: cannot find symbol
+  public void controllerUpdate(ControllerEvent evt) {
+                               ^
+  symbol:   class ControllerEvent
+  location: class JpegImagesToMovie
+C:\Users\Owner\Documents\GitHub\color-ch3-2016-JaimitaZhang\ColorLabs\bookClasses\JpegImagesToMovie.java:410: error: cannot find symbol
+  public void dataSinkUpdate(DataSinkEvent evt) {
+                             ^
+  symbol:   class DataSinkEvent
+  location: class JpegImagesToMovie
+C:\Users\Owner\Documents\GitHub\color-ch3-2016-JaimitaZhang\ColorLabs\bookClasses\JpegImagesToMovie.java:506: error: cannot find symbol
+  static MediaLocator createMediaLocator(String url) {
+         ^
+  symbol:   class MediaLocator
+  location: class JpegImagesToMovie
+C:\Users\Owner\Documents\GitHub\color-ch3-2016-JaimitaZhang\ColorLabs\bookClasses\JpegImagesToMovie.java:537: error: cannot find symbol
+  class ImageDataSource extends PullBufferDataSource {
+                                ^
+  symbol:   class PullBufferDataSource
+  location: class JpegImagesToMovie
+C:\Users\Owner\Documents\GitHub\color-ch3-2016-JaimitaZhang\ColorLabs\bookClasses\JpegImagesToMovie.java:604: error: cannot find symbol
+  class ImageSourceStream implements PullBufferStream {
+                                     ^
+  symbol:   class PullBufferStream
+  location: class JpegImagesToMovie
+C:\Users\Owner\Documents\GitHub\color-ch3-2016-JaimitaZhang\ColorLabs\bookClasses\JpegImagesToMovie.java:548: error: cannot find symbol
+    public void setLocator(MediaLocator source) {
+                           ^
+  symbol:   class MediaLocator
+  location: class JpegImagesToMovie.ImageDataSource
+C:\Users\Owner\Documents\GitHub\color-ch3-2016-JaimitaZhang\ColorLabs\bookClasses\JpegImagesToMovie.java:551: error: cannot find symbol
+    public MediaLocator getLocator() {
+           ^
+  symbol:   class MediaLocator
+  location: class JpegImagesToMovie.ImageDataSource
+C:\Users\Owner\Documents\GitHub\color-ch3-2016-JaimitaZhang\ColorLabs\bookClasses\JpegImagesToMovie.java:578: error: cannot find symbol
+    public PullBufferStream[] getStreams() {
+           ^
+  symbol:   class PullBufferStream
+  location: class JpegImagesToMovie.ImageDataSource
+C:\Users\Owner\Documents\GitHub\color-ch3-2016-JaimitaZhang\ColorLabs\bookClasses\JpegImagesToMovie.java:587: error: cannot find symbol
+    public Time getDuration() {
+           ^
+  symbol:   class Time
+  location: class JpegImagesToMovie.ImageDataSource
+C:\Users\Owner\Documents\GitHub\color-ch3-2016-JaimitaZhang\ColorLabs\bookClasses\JpegImagesToMovie.java:608: error: cannot find symbol
+    VideoFormat format;
+    ^
+  symbol:   class VideoFormat
+  location: class JpegImagesToMovie.ImageSourceStream
+C:\Users\Owner\Documents\GitHub\color-ch3-2016-JaimitaZhang\ColorLabs\bookClasses\JpegImagesToMovie.java:639: error: cannot find symbol
+    public void read(Buffer buf) throws IOException {
+                     ^
+  symbol:   class Buffer
+  location: class JpegImagesToMovie.ImageSourceStream
+C:\Users\Owner\Documents\GitHub\color-ch3-2016-JaimitaZhang\ColorLabs\bookClasses\JpegImagesToMovie.java:693: error: cannot find symbol
+    public Format getFormat() {
+           ^
+  symbol:   class Format
+  location: class JpegImagesToMovie.ImageSourceStream
+C:\Users\Owner\Documents\GitHub\color-ch3-2016-JaimitaZhang\ColorLabs\bookClasses\JpegImagesToMovie.java:697: error: cannot find symbol
+    public ContentDescriptor getContentDescriptor() {
+           ^
+  symbol:   class ContentDescriptor
+  location: class JpegImagesToMovie.ImageSourceStream
+C:\Users\Owner\Documents\GitHub\color-ch3-2016-JaimitaZhang\ColorLabs\bookClasses\APicture2.java:24: error: invalid method declaration; return type required
+  public APicture2 ()
+         ^
+C:\Users\Owner\Documents\GitHub\color-ch3-2016-JaimitaZhang\ColorLabs\bookClasses\APicture2.java:36: error: invalid method declaration; return type required
+  public APicture2(String fileName)
+         ^
+C:\Users\Owner\Documents\GitHub\color-ch3-2016-JaimitaZhang\ColorLabs\bookClasses\APicture2.java:47: error: invalid method declaration; return type required
+  public APicture2(int width, int height)
+         ^
+C:\Users\Owner\Documents\GitHub\color-ch3-2016-JaimitaZhang\ColorLabs\bookClasses\APicture2.java:57: error: invalid method declaration; return type required
+  public APicture2(Picture copyPicture)
+         ^
+C:\Users\Owner\Documents\GitHub\color-ch3-2016-JaimitaZhang\ColorLabs\bookClasses\APicture2.java:67: error: invalid method declaration; return type required
+  public APicture2(BufferedImage image)
+         ^
+C:\Users\Owner\Documents\GitHub\color-ch3-2016-JaimitaZhang\ColorLabs\bookClasses\APicture2.java:17: error: class Picture is public, should be declared in a file named Picture.java
+public class Picture extends SimplePicture
+       ^
+Building index for all the packages and classes...
+Building index for all classes...
+Generating C:\Users\Owner\Documents\GitHub\FinalProject\FinalProject\doc\allclasses-frame.html...
+Generating C:\Users\Owner\Documents\GitHub\FinalProject\FinalProject\doc\allclasses-noframe.html...
+Generating C:\Users\Owner\Documents\GitHub\FinalProject\FinalProject\doc\index.html...
+Generating C:\Users\Owner\Documents\GitHub\FinalProject\FinalProject\doc\stylesheet.css...
+37 errors

@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Stump()
+comment1.params=x\ y
+comment1.target=Stump(int,\ int)
+comment2.params=page
+comment2.target=void\ draw(java.awt.Graphics)
+comment3.params=page\ x\ y
+comment3.target=void\ move(java.awt.Graphics,\ int,\ int)
+numComments=4
