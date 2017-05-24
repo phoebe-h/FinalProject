@@ -6,16 +6,21 @@ import java.awt.*;
 
 //draws second string (exactly like other string class)
 public class Text
-{private String string; 
- private int[]xrectangle=new int [4];
- private int[]yrectangle=new int [4];
+{
+    private String string; 
+    private int[]xrectangle=new int [4];
+    private int[]yrectangle=new int [4];
    
+    //constructor
     public Text(String string1)
-    {string = string1; 
+    {
+        string = string1; 
         
     }
 
-    public void draw (Graphics page) {
+    public void draw (Graphics page)
+    {
+        //sets page color to white
         page.setColor(Color.white);
         //assigns coordinate to array elements
         xrectangle[0]=0;
@@ -32,5 +37,5 @@ public class Text
 
         page.setFont(new Font("Impact", Font.BOLD, 18));
         page.drawString(string, 10, 35);
-       }
+    }
 }
