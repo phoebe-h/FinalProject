@@ -1,5 +1,5 @@
 
-//NOTE: Not really sure how the double Buffer works, just followed a tutorial and it worked 
+//this class is to stop flickering 
 
 import java.awt.*;
 import java.util.Random;

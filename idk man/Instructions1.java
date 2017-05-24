@@ -1,10 +1,5 @@
 
-/**
- * Write a description of class Instructions1 here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */import java.io.*;
+import java.io.*;
 import java.awt.Graphics;
 import java.awt.Image;
 import javax.imageio.*;

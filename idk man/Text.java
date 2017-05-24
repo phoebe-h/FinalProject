@@ -1,7 +1,3 @@
-/**
- * Jamie Zhang 
- */
-
 import java.awt.*; 
 
 //draws second string (exactly like other string class)
@@ -23,6 +19,7 @@ public class Text
         //sets page color to white
         page.setColor(Color.white);
         //assigns coordinate to array elements
+        //this will be rectangle displayed in background
         xrectangle[0]=0;
         xrectangle[1]=0;
         xrectangle[2]=125;
@@ -32,9 +29,11 @@ public class Text
         yrectangle[2]=55;
         yrectangle[3]=0;
         page.fillPolygon(xrectangle,yrectangle,4);
+        //draws border around rectangle
         page.setColor(Color.black); 
         page.drawPolygon(xrectangle,yrectangle,4);
 
+        //writes points + score on page
         page.setFont(new Font("Impact", Font.BOLD, 18));
         page.drawString(string, 10, 35);
     }
